@@ -292,6 +292,12 @@ export interface SleepSessionRecord extends IntervalRecord {
   notes?: string;
 }
 
+export interface MindfulnessSessionRecord extends IntervalRecord {
+  recordType: 'MindfulnessSession';
+  title?: string;
+  notes?: string;
+}
+
 export interface RespiratoryRateRecord extends InstantaneousRecord {
   recordType: 'RespiratoryRate';
   rate: number;
@@ -362,6 +368,7 @@ export type HealthConnectRecord =
   | MenstruationFlowRecord
   | MenstruationPeriodRecord
   | SleepSessionRecord
+  | MindfulnessSessionRecord
   | RespiratoryRateRecord
   | WheelchairPushesRecord
   | Vo2MaxRecord
